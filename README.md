@@ -51,7 +51,21 @@
   + 可以给参数指定类型
     + path("book/<int\:book_id>", views.book_detail_path)
     + 会校验
-    + str|slug|uuid|path
+    + str
+      + 不能包含斜杠
+    + slug
+      + 由英文横杠-，或者下划线_连接英文字符或者数字而成的字符串
+    + uuid
+    + path
+      + 匹配非空的英文字符串，可以包含斜杠/
+
++ path函数的view参数
+  + 可以为一个视图函数或者 类视图.as_view()或者django.urls.include()函数的返回值
+
+
++ url反转
+  + 
+
 
 
 

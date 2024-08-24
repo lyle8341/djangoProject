@@ -15,3 +15,9 @@ def book_detail_path(request, book_id):
     return HttpResponse(f"您查找的图书id是: {book_id}")
 
 
+def book_slug(request, book_id):
+    return HttpResponse(f"您找的图书id是: {book_id}")
+
+
+def book_path(request, book_id):
+    return HttpResponse(f"您找的图书id是: {book_id}")
