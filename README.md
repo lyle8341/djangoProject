@@ -86,11 +86,15 @@
     ```
 
 
++ html中使用静态文件
+  + 方式一(.html文件中)
+    > {% load static %}
+  + 方式二(settings.py)
+    > 'builtins': ['django.templatetags.static']
 
 
-
-
-
++ 直接访问静态文件（上传的文件）
+  ![静态文件访问](docImg/静态文件访问.png)
 
 
 

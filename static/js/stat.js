@@ -1,0 +1,1 @@
+alert("This is come from static js")

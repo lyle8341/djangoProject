@@ -59,3 +59,7 @@ def template_form(request):
 
 def template_structure(request):
     return render(request,"template_structure.html")
+
+
+def static_view(request):
+    return render(request, "static.html")
