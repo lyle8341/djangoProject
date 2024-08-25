@@ -1,5 +1,7 @@
 # Django 项目练习
 
++ python
+  + 使用虚拟环境，避免和本机上python冲突，导致pip下载依赖失败
 
 + 项目启动方式
   + 项目根路径下执行命令: python .\manage.py runserver
@@ -64,10 +66,24 @@
 
 
 + url反转
-  + 
 
 
 
++ 渲染模版
+  + 方式一
+    ```python
+    from django.template.loader import render_to_string
+    from django.http import HttpResponse
+    def book_detail(request, book_id):
+        html = render_to_string("detail.html")
+        return HttpResponse(html)
+    ```
+  + 方式三
+    ```python
+    from django.shortcuts import render
+    def book_list(request):
+        return render(request, "list.html")
+    ```
 
 
 

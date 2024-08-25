@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器适用</title>
+</head>
+<body>
+{{ greet }}
+
+<p>{{ greet|cut:" " }}</p>
+
+<p>生日: {{ birthday|date:"Y/m/d" }}</p>
+
+<div>
+    {{ html|safe }}
+</div>
+
+<div>
+    {{ bigText|truncatechars:10 }}
+</div>
+</body>
+</html>

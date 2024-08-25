@@ -1,0 +1,10 @@
+<div>
+    <h2>热门文章</h2>
+    <ul>
+        <li>厉害了我的锅</li>
+        <li>为美国发展指明了方向</li>
+        {% for article in articles %}
+            <li>{{ article }}</li>
+        {% endfor %}
+    </ul>
+</div>

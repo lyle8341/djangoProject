@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% comment %}extends标签必须放在第一行，第一行，第一行。字模版的代码必须放在block中{% endcomment %}
+
+{% comment %}输入block，tab键提示{% endcomment %}
+{% block head %}
+    <style>
+    body{
+        background-color: pink;
+    }
+    </style>
+{% endblock %}
+
+{% block title %}首页{% endblock %}
+
+{% block body %}
+    {{ block.super }}
+    {% include 'hotarticle.html' %}
+    <div>新闻联播</div>
+{% endblock %}
+
+
+
+
+
