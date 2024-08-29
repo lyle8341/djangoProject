@@ -102,11 +102,32 @@
 
 
 
+### 服务器上线
++ settings.py
+  > 将DEBUG = True ---> DEBUG = False
+  
+  > ALLOWED_HOSTS = [] ---> ALLOWED_HOSTS = ['网站域名']或者['服务监听的IP地址']
 
++ WSGI（web server gateway interface）
+  + 是python应用程序或框架和web服务器之间的一种接口
 
++ uWSGI是WSGI的一种，它实现了http协议、WSGI协议以及uwsgi协议
 
++ uWSGI安装
+  ```shell
+  pip3 install uwsgi==2.0.26
+  # -i, --ignore-case
+  pip3 freeze|grep -i 'uwsgi'
+  ```
 
-
++ 配置uWSGI(与settings.py同级目录)
+  + 见[uwsgi.ini](djangoProject/uwsgi.ini)
++ 启动uwsgi
+  + cd到uWSGI配置文件目录
+  + uwsgi --ini uwsgi.ini
++ 停止uwsgi
+  + cd到uWSGI配置文件目录
+  + uwsgi --stop uwsgi.pid
 
 
 
